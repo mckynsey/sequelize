@@ -7,4 +7,12 @@ const FormateurController = require('../controllers/FormateurController');
 router.get("/", (req, res) => { // on declare la route get
  FormateurController.getAllFormateurs(req, res); // on declare la fonction getAllformations
 });
+router.post("/", (req, res) => {
+  FormateurController.addFormateur(req, res);
+});
+router.get("/:id", (req, res) => {
+  FormateurController.getFormateurById(req, res);
+});
+
+
 module.exports = router;
